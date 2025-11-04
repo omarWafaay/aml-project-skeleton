@@ -18,7 +18,7 @@ class SimpleTinyImageNetNet(nn.Module):
 
         self.classifier = nn.Sequential(
             nn.Flatten(),                                 # → B x (64*16*16)
-            nn.Linear(64 * 16 * 16, 200)                  # → B x 200
+            nn.Linear(200704, 200)                  # → B x 200
         )
 
     def forward(self, x):
