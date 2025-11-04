@@ -64,6 +64,9 @@ def validate(model, val_loader, criterion, device):
 
 def main():
     # Initialize wandb
+    # Initialize wandb
+    wandb.login(relogin=True)
+
     wandb.init(project="tiny-imagenet", name="simple-cnn-run")
 
     # Load transformed data
